@@ -6,6 +6,7 @@ mod conversation;
 mod file_ops;
 mod json;
 mod mcp;
+mod mcp_client;
 mod oauth;
 mod permissions;
 mod prompt;
@@ -37,6 +38,10 @@ pub use file_ops::{
 pub use mcp::{
     mcp_server_signature, mcp_tool_name, mcp_tool_prefix, normalize_name_for_mcp,
     scoped_mcp_config_hash, unwrap_ccr_proxy_url,
+};
+pub use mcp_client::{
+    McpClaudeAiProxyTransport, McpClientAuth, McpClientBootstrap, McpClientTransport,
+    McpRemoteTransport, McpSdkTransport, McpStdioTransport,
 };
 pub use oauth::{
     code_challenge_s256, generate_pkce_pair, generate_state, loopback_redirect_uri,
